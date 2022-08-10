@@ -145,7 +145,7 @@ function diaDeLaSemana(numeroDeDia) {
     return 'Es fin de semana';
   }
 
-    return 'Es dia laboral';
+    return 'Es dia Laboral';
 } 
 
 
@@ -165,12 +165,12 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  for (var i = 0; i < arreglo.length; i++){
-    if (arreglo[i] !== arreglo[i +1]){
-      return false;
+  for (var i =0 ; i < arreglo.length - 1; i++) {
+    if(arreglo[i] !== arreglo[i+1]){
+      return false
     }
   }
-  return true;
+  return true
 } 
 
 
@@ -180,7 +180,7 @@ function mesesDelAño(array) {
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
   var nuevoArray = [];
-  for (var i=0; i < array.lenght; i++){
+  for (let i=0; i < array.lenght; i++){
     if (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){
       nuevoArray.push(array[i]);
     }
@@ -215,8 +215,22 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var array = [];
+  var suma = numero;
+  for(var i= 0; i<10; i++) {
+    suma = suma + 2;
+    if(suma === i) {break;}
+    else {
+        array.push(suma);
+      }
+    }
+  if (i<10){
+    return "Se interrumpió la ejecución";
+  } 
+    else {
+    return array;
+  }
 }
-
 
 function continueStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
